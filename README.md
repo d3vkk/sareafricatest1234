@@ -1,75 +1,92 @@
-# React + TypeScript + Vite
+# Sare Africa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Website Link](https://sareafricatest1234.netlify.app)
 
-Currently, two official plugins are available:
+[Login](https://sareafricatest1234.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Dashboard](https://sareafricatest1234.netlify.app/dashboard)
 
-## React Compiler
+## Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Complete Features: Login UI & Mock API
 
-## Expanding the ESLint configuration
+Attempted Features: Login Integration, Dashboard UI & Theme Switcher (Bonus)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Incomplete Features: Shop Management, Product Management & Bonus Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+For the Attempted Features, 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  Login Integration: Match logged in credentials to server retrieved credentials.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Dashboard UI: 
 
+    1. Make the Dashboard Mobile repsonsive
+
+    2. Add the Product Stock Status as a Pill that Changes Color depennding on the Status,
+    
+    3. Add the Top 5 Shops as a Table with Name and Stock Quantity Protect the dashboard route
+    
+    4. Integrate the mock api
+
+3. Theme Switcher: Add button with a true or false state that ties into the ThemeSwitcher Context and the tailwind `.dark` class for the false state
+
+
+## Technology Used
+
+• Tailwind CSS
+
+• React Hook Form
+
+• Zod
+
+• Axios
+
+• TanStack Query
+
+• shadcn/ui
+
+• React Hot Toast
+
+
+## Setup instructions
+
+[Install Nodejs and NPM](https://nodejs.org/en/download) on your device
+
+## How to run JSON Server
+
+The mock api server's link is embedded in the code in `src/api/axios.ts`
+
+## How to run the application
+
+Fork or clone this repo
+```
+git clone https://github.com/d3vkk/sareafricatest1234.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+Open directory and install packages
 ```
+cd sareafricatest1234
+
+bun install
+# or
+npm install
+```
+
+Run program
+```
+bun run dev
+# or
+npm run dev
+```
+
+Visit this [Localhost Link](http://localhost:5173)
+
+## Assumptions made
+
+N/A
+
+## Known limitations & Future improvements
+
+Refer to the Project Overview
+
+© 2026-present Donald K • Under MIT License
